@@ -3,20 +3,33 @@
 using namespace std;
 
 class Duplictes{
-    private:
-    unordered_map<int,int> map;
+    // private:
+    // unordered_map<int,int> map;
+    // public:
+    // void findDuplicate(int array[], int size){
+    //     for(int i=0;i<size;i++){
+    //         map[array[i]]++;
+    //     }
+
+    //     for(auto& [key,value]:map){
+    //         if(value>1){
+    //             cout<<"The duplicate element is "<<key<<endl;
+    //             return;
+    //         }
+    //     }
+    // }
+
+    /* Xor approach */
     public:
     void findDuplicate(int array[], int size){
-        for(int i=0;i<size;i++){
-            map[array[i]]++;
-        }
+        int ans=0;
+        for(int i=0;i<size;i++)
+        ans^=array[i];
+        for(int i=1;i<size;i++)
+        ans^=i;
 
-        for(auto& [key,value]:map){
-            if(value>1){
-                cout<<"The duplicate element is "<<key<<endl;
-                return;
-            }
-        }
+        cout<<"The duplicate element is "<<endl;
+        cout<<(ans)<<endl;
     }
 };
 
