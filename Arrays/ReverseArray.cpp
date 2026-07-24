@@ -15,16 +15,17 @@ class ReverseArray{
 };
 
 int main(){
-    int array[5]={1,2,3,4,5};
+    // int array[5]={1,2,3,4,5};
+    int array[4]={1,2,3,4};
     ReverseArray arr;
     cout<<"before reversing"<<endl;
-    for(int i=0;i<5;i++){
+    for(int i=0;i<4;i++){
         cout<< array[i] << " ";
     }
     cout<<endl;
-    arr.reverseArray(array,5);
+    arr.reverseArray(array,4);
     cout<<"After reversing"<<endl;
-    for(int i=0;i<5;i++){
+    for(int i=0;i<4;i++){
         cout<< array[i] << " ";
     }
     cout<<endl;
