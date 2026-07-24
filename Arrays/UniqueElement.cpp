@@ -19,18 +19,24 @@ public:
     }
     int uniqueELement(int array[], int size, unordered_map<int, int> &map)
     {
-        for (int i = 0; i < size; i++)
-        {
-            map[array[i]]++;
+        int xors=0;
+        // for (int i = 0; i < size; i++)
+        // {
+        //     map[array[i]]++;
+        // }
+        // for (auto &[key, value] : map)
+        // {
+        //     if (value == 1)
+        //     {
+        //         return key;
+        //     }
+        // }
+        // return -1;
+        //**Alternate approach**/
+        for(int i = 0; i<size;i++){
+            xors = xors^array[i];
         }
-        for (auto &[key, value] : map)
-        {
-            if (value == 1)
-            {
-                return key;
-            }
-        }
-        return -1;
+        return xors;
     }
 };
 
