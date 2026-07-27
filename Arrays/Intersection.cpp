@@ -8,6 +8,9 @@ vector<int> intersection(vector<int> array1, vector<int> array2){
     
     for(int x:array1){
         for(int y=0;y<array2.size();y++){
+            if(array2[y]>x){
+                break;
+            }
             if(x==array2[y]){
                 instersect.push_back(x);
                 array2[y]=INT_MIN;
