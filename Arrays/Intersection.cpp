@@ -11,6 +11,7 @@ vector<int> intersection(vector<int> array1, vector<int> array2){
             if(x==array2[y]){
                 instersect.push_back(x);
                 array2[y]=INT_MIN;
+                break;
             }
         }
     }
